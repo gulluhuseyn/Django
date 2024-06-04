@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block page_title %}
+    Home page
+{% endblock page_title %}
+{% block body %}
+<h1>Salam millet</h1>
+<div class="articles">
+    <h2>Article:</h2>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <h3>{{article.author}}</h3>
+                <h4>{{article.title}}</h4>
+                <p>{{article.content}}</p>
+                <small>{{article.created_date}}</small>
+                <hr>
+            </li>
+            
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock body %}
